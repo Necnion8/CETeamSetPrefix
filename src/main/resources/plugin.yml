@@ -1,0 +1,6 @@
+name: CETeamSetPrefix
+version: '${version}'
+main: com.gmail.necnionch.myplugin.ceteamsetprefix.bukkit.CETeamSetPrefixPlugin
+api-version: 1.13
+depend: [ CommandAPI, SideboardPerPlayer ]
+authors: [ Necnion8 ]

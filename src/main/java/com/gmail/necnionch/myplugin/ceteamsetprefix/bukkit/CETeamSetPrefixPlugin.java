@@ -58,6 +58,7 @@ public final class CETeamSetPrefixPlugin extends JavaPlugin {
             throw new WrapperCommandSyntaxException(e);
         }
 
+        text = text.substring(0, 64);
         team.setPrefix(text);
         sender.sendMessage("チームPrefixを変更: " + text);
         return 0;
@@ -80,6 +81,7 @@ public final class CETeamSetPrefixPlugin extends JavaPlugin {
             throw new WrapperCommandSyntaxException(e);
         }
 
+        text = text.substring(0, 64);
         team.setSuffix(text);
         sender.sendMessage("チームSuffixを変更: " + text);
         return 0;

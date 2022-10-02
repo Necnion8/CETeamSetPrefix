@@ -43,17 +43,18 @@ public final class CETeamSetPrefixPlugin extends JavaPlugin {
             return 0;
 
         String text;
-        Entity target;
-        if (sender.getCallee() instanceof Entity) {
-            target = (Entity) sender.getCallee();
-        } else if (sender.getCaller() instanceof Entity) {
-            target = (Entity) sender.getCaller();
-        } else {
-            throw new WrapperCommandSyntaxException(new CommandSyntaxException(new CommandExceptionType() {}, () -> "NOT ENTITY TARGET"));
-        }
+//        Entity target;
+//        if (sender.getCallee() instanceof Entity) {
+//            target = (Entity) sender.getCallee();
+//        } else if (sender.getCaller() instanceof Entity) {
+//            target = (Entity) sender.getCaller();
+//        } else {
+//            throw new WrapperCommandSyntaxException(new CommandSyntaxException(new CommandExceptionType() {}, () -> "NOT ENTITY TARGET"));
+//        }
 
         try {
-            text = SideboardPlugin.convertJsonToString(sender.getCaller(), target, json);
+            text = SideboardPlugin.convertJsonToString(sender.getCaller(), json);
+//            text = SideboardPlugin.convertJsonToString(sender.getCaller(), target, json);
         } catch (CommandSyntaxException e) {
             e.printStackTrace();
             throw new WrapperCommandSyntaxException(e);
@@ -74,17 +75,8 @@ public final class CETeamSetPrefixPlugin extends JavaPlugin {
             return 0;
 
         String text;
-        Entity target;
-        if (sender.getCallee() instanceof Entity) {
-            target = (Entity) sender.getCallee();
-        } else if (sender.getCaller() instanceof Entity) {
-            target = (Entity) sender.getCaller();
-        } else {
-            throw new WrapperCommandSyntaxException(new CommandSyntaxException(new CommandExceptionType() {}, () -> "NOT ENTITY TARGET"));
-        }
-
         try {
-            text = SideboardPlugin.convertJsonToString(sender.getCaller(), target, json);
+            text = SideboardPlugin.convertJsonToString(sender.getCaller(), json);
         } catch (CommandSyntaxException e) {
             e.printStackTrace();
             throw new WrapperCommandSyntaxException(e);

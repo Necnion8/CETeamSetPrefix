@@ -1,14 +1,12 @@
 package com.gmail.necnionch.myplugin.ceteamsetprefix.bukkit;
 
 import com.gmail.necnionch.myplugin.sideboardperplayer.bukkit.SideboardPlugin;
-import com.mojang.brigadier.exceptions.CommandExceptionType;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.arguments.GreedyStringArgument;
 import dev.jorel.commandapi.arguments.TeamArgument;
 import dev.jorel.commandapi.exceptions.WrapperCommandSyntaxException;
 import dev.jorel.commandapi.wrappers.NativeProxyCommandSender;
-import org.bukkit.entity.Entity;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Team;
 
